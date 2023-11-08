@@ -65,6 +65,7 @@ You Created. --> Save.
 
 ## 6) create an S3 bucket
 ## Execute the commands below in your KOPS control Server. use unique s3 bucket name. If you get bucket name exists error.
+## s3 buckets are globally unique so you have to create a unique name or you will get an error.
 	aws s3 mb s3://class30kops
 	aws s3 ls # to verify
 	
