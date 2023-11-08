@@ -65,7 +65,7 @@ You Created. --> Save.
 
 ## 6) create an S3 bucket
 ## Execute the commands below in your KOPS control Server. use unique s3 bucket name. If you get bucket name exists error.
-## s3 buckets are globally unique so you have to create a unique name or you will get an error.
+  #s3 buckets are globally unique so you have to create a unique name or you will get an error.
 	aws s3 mb s3://class30kops
 	aws s3 ls # to verify
 	
@@ -75,12 +75,15 @@ You Created. --> Save.
     
        vi .bashrc
 	# Give Unique Name And S3 Bucket which you created.
+        # the export name must end with .k8s.local but the name can be whatever you want
+	# the state //class30kops needs to be the same name of the bucket you created earlier
 	export NAME=class30.k8s.local
 	export KOPS_STATE_STORE=s3://class30kops
  
       source .bashrc  
 	
 ### 7) Create sshkeys before creating cluster
+#once you do just keep pressing enter till the key is generated.
 ```sh
     ssh-keygen
  ```
